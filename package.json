@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"  // Helps with handling HTTP requests if using an HTTP Trigger
+  }
+}
