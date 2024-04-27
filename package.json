@@ -1,6 +1,29 @@
 {
+<<<<<<< HEAD
+  "name": "httptest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielTaylor2432/webhooks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielTaylor2432/webhooks/issues"
+  },
+  "homepage": "https://github.com/danielTaylor2432/webhooks#readme",
+  "dependencies": {
+    "axios": "^1.6.8"
+=======
   "dependencies": {
     "axios": "^0.21.1",
     "express": "^4.17.1"  // Helps with handling HTTP requests if using an HTTP Trigger
+>>>>>>> 357c9c15ce4cb0f08b0da366b2e7c41a5eb6088b
   }
 }
