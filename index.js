@@ -5,12 +5,15 @@ module.exports = async function (context, req) {
 
     const discordData = req.body; // Data from Discord webhook
 
-    // Assuming the data includes a type to determine the event nature
     if (discordData.type === 'ticket_created') {
-        const taskName = discordData.details.title; // Customize these fields based on your data structure
-        const taskDescription = discordData.details.description; // Customize these fields based on your data structure
+        // Dynamically building task details
+        const ekiID = discordData['create.form.1'];
+        const ekuEmail = discordData['create.form.2'];
+        const lastFirst = discordData['create.form.3'];
+        const phone = discordData['create.form.4'];
+        const taskDescription = discordData['create.form.5'];
 
-        // Call Asana API to create a new task
+        // Call Asana API to create a new task with the extracted information
         await createTaskInAsana(taskName, taskDescription);
     }
 
@@ -33,8 +36,8 @@ async function createTaskInAsana(name, description) {
         "data": {
             "name": name,
             "notes": description,
-            "workspace": "your_workspace_id", // Find your workspace ID in Asana
-            "projects": ["your_project_id"] // Optional: Specify if the task belongs to a project
+            "workspace": "your_workspace_id",  // Find your workspace ID in Asana
+            "projects": ["your_project_id"]   // Optional: Specify if the task belongs to a project
         }
     };
 
@@ -45,4 +48,4 @@ async function createTaskInAsana(name, description) {
         context.log('Error creating task in Asana:', error.response.data);
         throw error;
     }
-}
+};
