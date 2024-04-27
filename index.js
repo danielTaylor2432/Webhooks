@@ -45,7 +45,6 @@ async function createTaskInAsana(name, description) {
         'Authorization': `Bearer ${asanaToken}`,
         'Content-Type': 'application/json'
     };
-curl -H "Authorization: Bearer 2/1206047328391975/1207174572474795:8a3947f0fa1e4e0f814d8e814b683db2" "https://app.asana.com/api/1.0/workspaces/978674317228910/projects"
     const data = {
         "data": {
             "name": name,
