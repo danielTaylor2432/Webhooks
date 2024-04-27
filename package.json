@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/danielTaylor2432/webhooks#readme",
   "dependencies": {
-    "axios": "^0.21.1",  // Ensure only one entry for axios with the latest version you need
+    "axios": "^0.21.1",
     "express": "^4.17.1"
   }
 }
